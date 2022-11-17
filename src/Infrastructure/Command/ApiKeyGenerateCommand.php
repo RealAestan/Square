@@ -29,7 +29,8 @@ class ApiKeyGenerateCommand extends Command
         $io = new SymfonyStyle($input, $output);
 
         $apiKey = $this->apiKeyRepository->createNewApiKey();
-        $io->success(sprintf('Your key has beeen successfully generated : %s. This key has a quota of %d', $apiKey->getKey(), $apiKey->getQuota()));
+        $io->success(sprintf('Your key has beeen successfully generated : %s This key has a quota of %d', $apiKey->getKey()));
+        $io->success(sprintf('This key has a quota of %d', $apiKey->getQuota()));
 
         return Command::SUCCESS;
     }
