@@ -1,3 +1,5 @@
 controllers:
-    resource: ../src/Controller/
+    name_prefix: api_
+    prefix: /api
+    resource: ../src/Infrastructure/Controller/Api
     type: attribute
